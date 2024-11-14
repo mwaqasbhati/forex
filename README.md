@@ -248,9 +248,6 @@ Your submission will be evaluated based on the following criteria:
 
 2. **Prepare the Codebase**
 
-   - Remove any sensitive information, such as API keys, from the code.
-   - Ensure all dependencies are listed in `pubspec.yaml`.
-
 3. **Update Documentation**
 
    - Include any additional notes or explanations in the `README.md` file.
@@ -262,8 +259,6 @@ Your submission will be evaluated based on the following criteria:
    - Include the `pubspec.lock` file to ensure dependency versions are preserved.
 
 5. **Submit Your Work**
-
-   - Follow the submission instructions provided to you (e.g., upload the zip file to a specified platform or email it).
 
 ---
 
@@ -294,7 +289,3 @@ If you have any questions or need clarification, please reach out to:
 ---
 
 **Good luck, and we look forward to seeing your implementation!**
-
-# EOF
-
----
