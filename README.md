@@ -46,7 +46,7 @@ The FXTM Forex Tracker App is designed to display real-time forex prices for sel
 1. **Clone the Repository**
 
    ```bash
-   git clone [repository-url]
+   git clone https://gitlab.com/exinity-hiring/fxtm-trader-launchpad.git
    ```
 
 2. **Navigate to the Project Directory**

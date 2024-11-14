@@ -88,8 +88,8 @@ class _MainPageState extends State<MainPage> {
             label: 'Markets',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.show_chart),
-            label: 'Portfolio',
+            icon: Icon(Icons.newspaper),
+            label: 'News',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
