@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fxtm/models/forex_symbol.dart';
-import 'package:fxtm/pages/history_screen.dart';
-import 'package:fxtm/provider/forex_websocket_provider.dart';
-import 'package:fxtm/provider/forex_symbol_provider.dart';
-import 'package:fxtm/presentation/widgets/empty_state_widget.dart';
-import 'package:fxtm/presentation/widgets/error_state_widget.dart';
-import 'package:fxtm/presentation/widgets/shimmer_list_widget.dart';
+import 'package:fxtm/features/forex/models/forex_symbol.dart';
+import 'package:fxtm/features/forex/pages/history_screen.dart';
+import 'package:fxtm/features/forex/provider/forex_websocket_provider.dart';
+import 'package:fxtm/features/forex/provider/forex_symbol_provider.dart';
+import 'package:fxtm/features/forex/presentation/widgets/empty_state_widget.dart';
+import 'package:fxtm/features/forex/presentation/widgets/error_state_widget.dart';
+import 'package:fxtm/features/forex/presentation/widgets/shimmer_list_widget.dart';
 
 class MainScreen extends ConsumerStatefulWidget {
   const MainScreen({super.key});

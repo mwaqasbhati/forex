@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fxtm/models/trade_model.dart';
+import 'package:fxtm/features/forex/models/trade_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'pages/main_screen.dart';
+import 'features/forex/pages/main_screen.dart';
 
 void main() async {
   await Hive.initFlutter();

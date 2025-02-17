@@ -6,9 +6,9 @@
 import 'dart:async' as _i4;
 
 import 'package:dio/dio.dart' as _i2;
-import 'package:fxtm/models/forex_symbol.dart' as _i5;
-import 'package:fxtm/repositories/forex_repository.dart' as _i3;
-import 'package:fxtm/services/finnhub_service.dart' as _i6;
+import 'package:fxtm/features/forex/models/forex_symbol.dart' as _i5;
+import 'package:fxtm/features/forex/repositories/forex_repository.dart' as _i3;
+import 'package:fxtm/features/forex/services/finnhub_service.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint

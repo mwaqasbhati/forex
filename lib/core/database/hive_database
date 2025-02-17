@@ -1,6 +1,6 @@
 // hive_database.dart
 import 'package:hive/hive.dart';
-import 'forex_model.dart'; // Freezed data model
+import '../../database/forex_model.dart'; // Freezed data model
 
 class HiveDatabase {
   final Box box;

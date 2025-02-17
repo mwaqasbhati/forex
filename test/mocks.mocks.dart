@@ -9,9 +9,9 @@ import 'dart:ui' as _i8;
 import 'package:flutter/material.dart' as _i10;
 import 'package:flutter/services.dart' as _i9;
 import 'package:flutter_riverpod/flutter_riverpod.dart' as _i2;
-import 'package:fxtm/models/forex_model.dart' as _i5;
-import 'package:fxtm/models/forex_symbol.dart' as _i4;
-import 'package:fxtm/models/trade_model.dart' as _i7;
+import 'package:fxtm/features/forex/models/forex_model.dart' as _i5;
+import 'package:fxtm/features/forex/models/forex_symbol.dart' as _i4;
+import 'package:fxtm/features/forex/models/trade_model.dart' as _i7;
 import 'package:mockito/mockito.dart' as _i1;
 
 import 'widget_test.dart' as _i3;

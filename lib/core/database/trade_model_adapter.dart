@@ -1,4 +1,4 @@
-import 'package:fxtm/models/trade_model.dart';
+import 'package:fxtm/features/forex/models/trade_model.dart';
 import 'package:hive/hive.dart';
 
 class TradeModelAdapter extends TypeAdapter<TradeModel> {

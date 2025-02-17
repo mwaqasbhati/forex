@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fxtm/dio/dio_service.dart';
-import 'package:fxtm/models/forex_symbol.dart';
-import 'package:fxtm/provider/forex_symbol_provider.dart';
-import 'package:fxtm/repositories/forex_repository.dart';
-import 'package:fxtm/services/finnhub_service.dart';
+import 'package:fxtm/core/dio/dio_service.dart';
+import 'package:fxtm/features/forex/models/forex_symbol.dart';
+import 'package:fxtm/features/forex/provider/forex_symbol_provider.dart';
+import 'package:fxtm/features/forex/repositories/forex_repository.dart';
+import 'package:fxtm/features/forex/services/finnhub_service.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
 

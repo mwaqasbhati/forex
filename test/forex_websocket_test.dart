@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fxtm/models/trade_model.dart';
-import 'package:fxtm/provider/forex_websocket_provider.dart';
-import 'package:fxtm/services/forex_websocket_service.dart';
+import 'package:fxtm/features/forex/models/trade_model.dart';
+import 'package:fxtm/features/forex/provider/forex_websocket_provider.dart';
+import 'package:fxtm/features/forex/services/forex_websocket_service.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';

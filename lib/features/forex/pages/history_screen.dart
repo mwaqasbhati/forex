@@ -1,10 +1,10 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fxtm/models/forex_symbol.dart';
-import 'package:fxtm/models/trade_model.dart';
-import 'package:fxtm/provider/forex_symbol_provider.dart';
-import 'package:fxtm/provider/forex_websocket_provider.dart';
+import 'package:fxtm/features/forex/models/forex_symbol.dart';
+import 'package:fxtm/features/forex/models/trade_model.dart';
+import 'package:fxtm/features/forex/provider/forex_symbol_provider.dart';
+import 'package:fxtm/features/forex/provider/forex_websocket_provider.dart';
 import 'package:intl/intl.dart';
 
 class HistoryScreen extends ConsumerStatefulWidget {

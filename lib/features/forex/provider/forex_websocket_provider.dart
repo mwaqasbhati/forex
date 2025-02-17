@@ -1,5 +1,5 @@
-import 'package:fxtm/models/trade_model.dart';
-import 'package:fxtm/provider/forex_symbol_provider.dart';
+import 'package:fxtm/features/forex/models/trade_model.dart';
+import 'package:fxtm/features/forex/provider/forex_symbol_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:flutter/widgets.dart';
 import '../services/forex_websocket_service.dart';

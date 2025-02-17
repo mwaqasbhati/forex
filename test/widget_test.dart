@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fxtm/models/forex_symbol.dart';
-import 'package:fxtm/pages/main_screen.dart';
-import 'package:fxtm/provider/forex_websocket_provider.dart';
-import 'package:fxtm/provider/forex_symbol_provider.dart';
+import 'package:fxtm/features/forex/models/forex_symbol.dart';
+import 'package:fxtm/features/forex/pages/main_screen.dart';
+import 'package:fxtm/features/forex/provider/forex_websocket_provider.dart';
+import 'package:fxtm/features/forex/provider/forex_symbol_provider.dart';
 
 // Mocking Providers
 class MockForexSymbolNotifier extends Notifier<List<ForexSymbol>> {

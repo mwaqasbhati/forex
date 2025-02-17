@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fxtm/dio/dio_service.dart';
-import 'package:fxtm/models/forex_symbol.dart';
+import 'package:fxtm/core/dio/dio_service.dart';
+import 'package:fxtm/features/forex/models/forex_symbol.dart';
 
 final forexServiceProvider = Provider.autoDispose<FinnhubService>((ref) {
   return FinnhubServiceImpl(ref.read(diosServiceProvider));
