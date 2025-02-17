@@ -46,29 +46,18 @@ This Flutter application provides real-time forex trading data, displaying a sto
    ```
 
 ## Project Structure
-```
-lib/
-│── features/
-│   ├── forex/
-│   │   ├── models/
-│   │   │   ├── forex_symbol.dart
-│   │   │   ├── trade_model.dart
-│   │   ├── provider/
-│   │   │   ├── forex_symbol_provider.dart
-│   │   │   ├── forex_websocket_provider.dart
-│   │   ├── ui/
-│   │   │   ├── stock_list_screen.dart
-│   │   │   ├── history_screen.dart
-│── main.dart
-```
+
+<img width="347" height="400" alt="Screenshot 2025-02-17 at 10 33 21 PM" src="https://github.com/user-attachments/assets/323ac965-43fd-40e6-ae73-1119144303da" />
 
 Demo:
 
 
 https://github.com/user-attachments/assets/b780dd04-450e-4cfe-a18d-a7156aded294
 
+Unit Tests:
 
 
+<img width="736" height="350" alt="Screenshot 2025-02-17 at 10 32 51 PM" src="https://github.com/user-attachments/assets/675ecb73-d82e-47c2-a41f-ebb04d913730" />
 
 
 ## Contributions
