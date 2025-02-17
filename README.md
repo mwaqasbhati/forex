@@ -83,15 +83,6 @@ Contributions are always welcome! If you’d like to help improve this project, 
 This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
-For inquiries or feedback, feel free to reach out via [your email or GitHub profile].
+For inquiries or feedback, feel free to reach out via [m.waqas.bhati@hotmail.com].
 
 ---
-
-### **Changes Made**:
-- Added emojis for visual appeal and clarity.
-- Enhanced section headings for a more structured look.
-- Added a brief introduction and summarized features with a friendly tone.
-- Reworked installation and usage instructions to be clearer and more concise.
-- Cleaned up the structure for better readability.
-
-Let me know if you'd like any further modifications!
