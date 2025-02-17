@@ -1,10 +1,11 @@
 import 'dart:async';
+import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fxtm/dio/dio_service.dart';
 import 'package:fxtm/models/forex_symbol.dart';
 
 final forexServiceProvider = Provider.autoDispose<FinnhubService>((ref) {
-  return FinnhubServiceImpl(ref);
+  return FinnhubServiceImpl(ref.read(diosServiceProvider));
 },);
 
 abstract class FinnhubService {
@@ -12,18 +13,24 @@ abstract class FinnhubService {
 }
 
 class FinnhubServiceImpl implements FinnhubService {
-  Ref ref;
+ // Ref ref;
   final String _apiKey = 'cuop0khr01qve8puksi0cuop0khr01qve8puksig';
+  final Dio _dio;
 
-  FinnhubServiceImpl(this.ref);
+  FinnhubServiceImpl(this._dio);
 
   @override
   Future<List<ForexSymbol>> fetchForexPairs() async {
     // For now, returning mock data
-    final response = await ref.read(diosServiceProvider).get('/forex/symbol?exchange=fxpig&token=$_apiKey');
+    final response = await _dio.get('/forex/symbol?exchange=fxpig&token=$_apiKey');
   if (response.statusCode == 200) {
-    final List data = response.data;
-    return data.take(5).map((item) => ForexSymbol.fromJson(item)).toList();
+    try {
+              final List data = response.data;
+        return data.take(5).map((item) => ForexSymbol.fromJson(item)).toList();
+
+    } catch(e, stacktrace) {
+        throw Exception('Failed to load forex symbols');
+    }
   } else {
     throw Exception('Failed to load forex symbols');
   }

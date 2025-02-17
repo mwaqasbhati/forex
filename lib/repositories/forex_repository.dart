@@ -4,16 +4,16 @@ import '../services/finnhub_service.dart';
 
 
 final forexRepoProvider = Provider.autoDispose<ForexRepository>((ref) {
-  return ForexRepository(ref);
+  return ForexRepository(ref.read(forexServiceProvider));
 },);
 
 class ForexRepository {
-//  final FinnhubService _service;
-  Ref ref;
+  final FinnhubService _service;
+//  Ref ref;
 
-  ForexRepository(this.ref);
+  ForexRepository(this._service);
 
   Future<List<ForexSymbol>> getForexPairs() {
-    return ref.read(forexServiceProvider).fetchForexPairs();
+    return _service.fetchForexPairs();
   }
 }
