@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fxtm/core/dio/dio_service.dart';
 import 'package:fxtm/features/forex/models/forex_symbol.dart';
@@ -14,7 +15,7 @@ abstract class FinnhubService {
 
 class FinnhubServiceImpl implements FinnhubService {
  // Ref ref;
-  final String _apiKey = 'cuop0khr01qve8puksi0cuop0khr01qve8puksig';
+  final String _apiKey = dotenv.env['API_KEY'] ?? '';
   final Dio _dio;
 
   FinnhubServiceImpl(this._dio);
@@ -26,7 +27,7 @@ class FinnhubServiceImpl implements FinnhubService {
   if (response.statusCode == 200) {
     try {
               final List data = response.data;
-        return data.take(5).map((item) => ForexSymbol.fromJson(item)).toList();
+        return data.take(20).map((item) => ForexSymbol.fromJson(item)).toList();
 
     } catch(e, stacktrace) {
         throw Exception('Failed to load forex symbols');

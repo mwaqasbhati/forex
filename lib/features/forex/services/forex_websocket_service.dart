@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:hive/hive.dart';
@@ -11,7 +12,7 @@ final forexWebSocketServiceProvider = Provider.autoDispose<ForexWebSocketService
 
 class ForexWebSocketService {
   WebSocketChannel? _channel;
-  final String _apiKey = 'cuop0khr01qve8puksi0cuop0khr01qve8puksig';
+  final String _apiKey = dotenv.env['API_KEY'] ?? '';
   final Set<String> _subscribedSymbols = {};
   Box<TradeModel>? tradeBox;
   Function(Map<String, ForexModel>)? onUpdate;
@@ -55,10 +56,6 @@ class ForexWebSocketService {
         final price = trade['p'] as double;
         final symbol = trade['s'] as String;
         final timestamp = trade['t'] as int;
-
-        print('old trade symbol ${_latestPrices[symbol]}');
-        print('new trade price $price symbol $symbol');
-
 
         saveTrade(symbol, price, timestamp);
 

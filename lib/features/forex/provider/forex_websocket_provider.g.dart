@@ -7,7 +7,7 @@ part of 'forex_websocket_provider.dart';
 // **************************************************************************
 
 String _$forexWebSocketNotifierHash() =>
-    r'638b300c6624b2c7e073987d8acd2832c9386f47';
+    r'8d228925610cdf4b60d25390003e3054eaee040b';
 
 /// See also [ForexWebSocketNotifier].
 @ProviderFor(ForexWebSocketNotifier)

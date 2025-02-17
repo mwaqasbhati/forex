@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fxtm/features/forex/models/forex_symbol.dart';
-import 'package:fxtm/features/forex/pages/history_screen.dart';
+import 'package:fxtm/features/forex/presentation/pages/history_screen.dart';
 import 'package:fxtm/features/forex/provider/forex_websocket_provider.dart';
 import 'package:fxtm/features/forex/provider/forex_symbol_provider.dart';
 import 'package:fxtm/features/forex/presentation/widgets/empty_state_widget.dart';
@@ -12,10 +12,10 @@ class MainScreen extends ConsumerStatefulWidget {
   const MainScreen({super.key});
 
   @override
-  _MainScreenState createState() => _MainScreenState();
+  MainScreenState createState() => MainScreenState();
 }
 
-class _MainScreenState extends ConsumerState<MainScreen> {
+class MainScreenState extends ConsumerState<MainScreen> {
   int _selectedIndex = 0;
   List<ForexSymbol>forexSymbols = [];
   String? errorMsg;
@@ -94,7 +94,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
 
   Widget _buildBody() {
   if (errorMsg != null) {
-    return ErrorStateWidget(errorMessage: errorMsg!);
+    return const ErrorStateWidget();
   } else if (forexSymbols.isEmpty) {
     return const EmptyStateWidget();
   } else {
@@ -106,7 +106,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
           final symbol = forexSymbols[index];
           final priceInfo = forexPrices[symbol.symbol];
 
-          bool hasPrice = priceInfo != null;
+         // bool hasPrice = priceInfo != null;
           bool isUp = priceInfo?.isUp ?? false;
           double price = priceInfo?.price ?? 0.00;
           double oldPrice = priceInfo?.oldPrice ?? 0.00;
@@ -119,7 +119,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: Colors.black.withValues(alpha: 0.05),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -251,7 +251,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
           );
         },
       ),
-      error: (e, stacktrace) => ErrorStateWidget(errorMessage: e.toString()),
+      error: (e, stacktrace) => const ErrorStateWidget(),
       loading: () => const ShimmerListWidget(),
     );
   }

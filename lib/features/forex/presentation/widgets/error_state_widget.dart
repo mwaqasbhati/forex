@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ErrorStateWidget extends StatelessWidget {
-  final String errorMessage;
+  final String? errorMessage;
 
-  const ErrorStateWidget({Key? key, required this.errorMessage}) : super(key: key);
+  const ErrorStateWidget({Key? key, this.errorMessage}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ErrorStateWidget extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            errorMessage,
+            errorMessage ?? '',
             textAlign: TextAlign.center,
             style: const TextStyle(fontSize: 14, color: Colors.grey),
           ),

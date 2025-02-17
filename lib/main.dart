@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fxtm/features/forex/models/trade_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'features/forex/pages/main_screen.dart';
+import 'features/forex/presentation/pages/main_screen.dart';
 
 void main() async {
   await Hive.initFlutter();
-  Hive.registerAdapter(TradeModelAdapter()); // Register the adapter
+  Hive.registerAdapter(TradeModelAdapter());
+  await dotenv.load(fileName: ".env");
   runApp(const FXTMApp());
 }
 
