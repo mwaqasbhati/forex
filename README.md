@@ -52,8 +52,27 @@ To run the app locally, follow these simple steps:
 
 ## 📂 Project Structure
 Here's an overview of the project's structure:
-
-![Project Structure](https://github.com/user-attachments/assets/323ac965-43fd-40e6-ae73-1119144303da)
+```
+lib/
+├── core/
+│   ├── database/         # Local database setup and management
+│   ├── dio/              # Dio HTTP client configuration
+│   ├── utils/            # Utility functions (e.g., date formatting)
+│   ├── features/forex/   # Forex trading features
+│   ├── models/           # Data models (e.g., trade, symbol)
+│   ├── presentation/     # UI components (screens, widgets)
+│   ├── pages/            # Application pages
+│   │   ├── history_screen.dart  # Trade history screen
+│   │   ├── main_screen.dart     # Main stock listing page
+├── widgets/              # Reusable UI components
+├── provider/             # State management providers
+├── repositories/         # Data repositories
+│   ├── forex_repository.dart  # Forex data repository
+├── services/             # Business logic services
+│   ├── finnhub_service.dart  # Finnhub API service
+│   ├── forex_websocket_service.dart  # WebSocket service for forex data
+├── main.dart             # App entry point
+```
 
 ## 📺 Demo
 Check out a demo of the app here:
