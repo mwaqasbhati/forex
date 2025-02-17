@@ -1,40 +1,32 @@
 import 'dart:async';
-import '../models/forex_pair.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fxtm/dio/dio_service.dart';
+import 'package:fxtm/models/forex_symbol.dart';
+
+final forexServiceProvider = Provider.autoDispose<FinnhubService>((ref) {
+  return FinnhubServiceImpl(ref);
+},);
 
 abstract class FinnhubService {
-  Future<List<ForexPair>> fetchForexPairs();
-  Future<List<Map<String, dynamic>>> fetchHistoricalData(String symbol);
+  Future<List<ForexSymbol>> fetchForexPairs();
 }
 
 class FinnhubServiceImpl implements FinnhubService {
-  // Placeholder for API endpoint
-  // static const String _baseUrl = 'https://finnhub.io/api/v1';
-  // Replace with your API key
-  // static const String _apiKey = 'YOUR_API_KEY';
+  Ref ref;
+  final String _apiKey = 'cuop0khr01qve8puksi0cuop0khr01qve8puksig';
+
+  FinnhubServiceImpl(this.ref);
 
   @override
-  Future<List<ForexPair>> fetchForexPairs() async {
-    // TODO: Implement API call to fetch forex pairs from Finnhub
+  Future<List<ForexSymbol>> fetchForexPairs() async {
     // For now, returning mock data
-    return [
-      ForexPair(
-        symbol: 'EUR/USD',
-        currentPrice: 1.1234,
-        change: 0.0005,
-        percentChange: 0.04,
-      ),
-      ForexPair(
-        symbol: 'GBP/USD',
-        currentPrice: 1.2345,
-        change: -0.0003,
-        percentChange: -0.02,
-      ),
-    ];
+    final response = await ref.read(diosServiceProvider).get('/forex/symbol?exchange=fxpig&token=$_apiKey');
+  if (response.statusCode == 200) {
+    final List data = response.data;
+    return data.take(5).map((item) => ForexSymbol.fromJson(item)).toList();
+  } else {
+    throw Exception('Failed to load forex symbols');
+  }
   }
 
-  @override
-  Future<List<Map<String, dynamic>>> fetchHistoricalData(String symbol) async {
-    // TODO: Implement API call to fetch historical data
-    return [];
-  }
 }

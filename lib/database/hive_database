@@ -1,0 +1,17 @@
+// hive_database.dart
+import 'package:hive/hive.dart';
+import 'forex_model.dart'; // Freezed data model
+
+class HiveDatabase {
+  final Box box;
+
+  HiveDatabase(this.box);
+
+  Future<void> saveData(String key, List<Candle> data) async {
+    await box.put(key, data);
+  }
+
+  List<Candle> getData(String key) {
+    return box.get(key) ?? [];
+  }
+}

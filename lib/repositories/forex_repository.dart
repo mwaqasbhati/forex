@@ -1,16 +1,19 @@
-import '../models/forex_pair.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fxtm/models/forex_symbol.dart';
 import '../services/finnhub_service.dart';
 
+
+final forexRepoProvider = Provider.autoDispose<ForexRepository>((ref) {
+  return ForexRepository(ref);
+},);
+
 class ForexRepository {
-  final FinnhubService _service;
+//  final FinnhubService _service;
+  Ref ref;
 
-  ForexRepository(this._service);
+  ForexRepository(this.ref);
 
-  Future<List<ForexPair>> getForexPairs() {
-    return _service.fetchForexPairs();
-  }
-
-  Future<List<Map<String, dynamic>>> getHistoricalData(String symbol) {
-    return _service.fetchHistoricalData(symbol);
+  Future<List<ForexSymbol>> getForexPairs() {
+    return ref.read(forexServiceProvider).fetchForexPairs();
   }
 }
