@@ -41,6 +41,10 @@ class ForexWebSocketService {
     _isConnected = true;
   }
 
+  bool getIsConnected() => _isConnected;
+  Set<String> subscribedSymbols() => _subscribedSymbols;
+  Map<String, ForexModel> getLatestPrices() => _latestPrices;
+  int getReconnectDelay() => _reconnectDelay;
   /// Handle incoming WebSocket messages
   void _onDataReceived(dynamic data) {
     final jsonData = json.decode(data);

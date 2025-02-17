@@ -13,6 +13,8 @@ class ForexWebSocketNotifier extends _$ForexWebSocketNotifier with WidgetsBindin
   bool _isConnected = false;
  // List<String> _subscribedSymbols = [];
 
+  bool getIsConnected() => _isConnected;
+  
   @override
   FutureOr<Map<String, ForexModel>> build() async {
     _webSocketService = ref.read(forexWebSocketServiceProvider);
