@@ -1,71 +1,91 @@
 # Forex Trading App
 
-## Overview
-This Flutter application provides real-time forex trading data, displaying a stock listing page and a detailed trade history screen. The app integrates WebSocket for live trade updates and presents data with interactive charts and a visually appealing UI.
+## 🚀 Overview
+Welcome to the **Forex Trading App**! This Flutter-based mobile application delivers real-time forex trading data and offers an engaging and dynamic user experience. It features a stock listing page, a detailed trade history screen, and interactive charts, all powered by WebSocket for live updates. Whether you're tracking forex prices or analyzing trade history, this app has you covered with a visually appealing and responsive UI.
 
-## Features
-- **Stock Listing Page**: Displays available forex symbols with real-time updates.
-- **Trade History Screen**: Shows past trades for a selected forex symbol with dynamic updates.
-- **Real-time WebSocket Integration**: Fetches and updates trade data live.
-- **Interactive Line Chart**: Visual representation of price trends using `fl_chart`.
-- **Trade List**: Displays trade history with percentage change indicators.
+## 📱 Features
+- **📊 Stock Listing Page**: Displays a list of forex symbols with real-time price updates.
+- **📈 Trade History Screen**: View detailed past trades for any selected forex symbol, updated dynamically.
+- **🌐 Real-time WebSocket Integration**: Get live data and updates with WebSocket for instant market insights.
+- **📉 Interactive Line Chart**: Visualize price trends over time using the `fl_chart` package.
+- **📜 Trade List**: View historical trades with percentage change indicators to analyze market trends.
 
-## Screens
-### 1. Stock Listing Page
-- Displays a list of forex symbols.
-- Updates prices in real time.
-- Clicking on a symbol navigates to the `HistoryScreen`.
+## 🖼️ Screens
+### 1. **Stock Listing Page**
+- View a list of available forex symbols.
+- Real-time price updates.
+- Tap a symbol to navigate to the **Trade History Screen** for more detailed insights.
 
-### 2. Trade History Screen
-- Fetches and displays trade history for the selected forex symbol.
-- Updates in real-time using WebSocket.
-- Includes a price overview card.
-- Shows an interactive price trend chart.
-- Lists historical trade records with percentage change indicators.
+### 2. **Trade History Screen**
+- Displays detailed trade history for the selected forex symbol.
+- Updated in real time using WebSocket for seamless data flow.
+- Interactive price trend chart showing historical price movements.
+- Price overview card for quick trade insights.
+- Historical trade records with percentage change indicators for better analysis.
 
-## Technologies Used
-- **Flutter**: Cross-platform mobile app development.
-- **Riverpod**: State management.
-- **WebSocket**: Real-time data updates.
-- **fl_chart**: Line chart visualization.
-- **Intl**: Date and time formatting.
+## 💻 Technologies Used
+- **Flutter**: Cross-platform app development framework.
+- **Riverpod**: State management solution for handling app state efficiently.
+- **WebSocket**: Real-time data fetching and updates.
+- **fl_chart**: Interactive line chart visualization for price trends.
+- **Intl**: Date and time formatting library for consistent formatting across regions.
 
-## Installation
+## 🛠️ Installation
+
+To run the app locally, follow these simple steps:
+
 1. Clone the repository:
    ```sh
    git clone https://github.com/mwaqasbhati/forex.git
    cd forex
    ```
+
 2. Install dependencies:
    ```sh
    flutter pub get
    ```
+
 3. Run the app:
    ```sh
    flutter run
    ```
 
-## Project Structure
+## 📂 Project Structure
+Here's an overview of the project's structure:
 
-<img width="347" height="400" alt="Screenshot 2025-02-17 at 10 33 21 PM" src="https://github.com/user-attachments/assets/323ac965-43fd-40e6-ae73-1119144303da" />
+![Project Structure](https://github.com/user-attachments/assets/323ac965-43fd-40e6-ae73-1119144303da)
 
-Demo:
+## 📺 Demo
+Check out a demo of the app here:
 
-
-https://github.com/user-attachments/assets/b780dd04-450e-4cfe-a18d-a7156aded294
-
-Unit Tests:
-
-
-<img width="736" height="350" alt="Screenshot 2025-02-17 at 10 32 51 PM" src="https://github.com/user-attachments/assets/675ecb73-d82e-47c2-a41f-ebb04d913730" />
+|  **Stock Listing Page**  | **Trade History Screen**  | **Price Trend Chart**  |
+|--------------------------|---------------------------|------------------------|
+| ![Stock Listing Page](https://github.com/user-attachments/assets/72f12fc8-9c13-4687-8429-2bb8ff21ab20) | ![Trade History](https://github.com/user-attachments/assets/cc810733-81b7-4126-8d75-dbdcb3e60697) | ![Price Trend](https://github.com/user-attachments/assets/ab488f0a-e813-4016-89bd-495cf3bfbfea) |
+| *Stock List View*        | *Trade History Overview*  | *Price Trend Chart*    |
 
 
-## Contributions
-Contributions are welcome! Feel free to open issues and submit pull requests.
 
-## License
-This project is licensed under the MIT License.
+## 🔧 Unit Tests
+Our unit tests ensure that the app runs smoothly. Here’s a glimpse of the test coverage:
 
-## Contact
-For any inquiries, reach out to [your email or GitHub profile].
+![Unit Tests](https://github.com/user-attachments/assets/675ecb73-d82e-47c2-a41f-ebb04d913730)
 
+## 🤝 Contributions
+Contributions are always welcome! If you’d like to help improve this project, feel free to open an issue or submit a pull request.
+
+## 📝 License
+This project is licensed under the [MIT License](LICENSE).
+
+## 📬 Contact
+For inquiries or feedback, feel free to reach out via [your email or GitHub profile].
+
+---
+
+### **Changes Made**:
+- Added emojis for visual appeal and clarity.
+- Enhanced section headings for a more structured look.
+- Added a brief introduction and summarized features with a friendly tone.
+- Reworked installation and usage instructions to be clearer and more concise.
+- Cleaned up the structure for better readability.
+
+Let me know if you'd like any further modifications!
