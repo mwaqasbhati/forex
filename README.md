@@ -64,6 +64,12 @@ Check out a demo of the app here:
 | *Stock List View*        | *Trade History Overview*  | *Price Trend Chart*    |
 
 
+## Demo Video:
+
+
+https://github.com/user-attachments/assets/d82b3e1b-a194-4b0a-b25b-15f50870f500
+
+
 
 ## 🔧 Unit Tests
 Our unit tests ensure that the app runs smoothly. Here’s a glimpse of the test coverage:
