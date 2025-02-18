@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fxtm/core/utils/datetimeUtil.dart';
+import 'package:fxtm/core/utils/datetime_util.dart';
 import 'package:fxtm/features/forex/models/trade_model.dart';
 
 class PriceCard extends StatelessWidget {

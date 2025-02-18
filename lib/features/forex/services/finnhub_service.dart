@@ -29,7 +29,7 @@ class FinnhubServiceImpl implements FinnhubService {
               final List data = response.data;
         return data.take(20).map((item) => ForexSymbol.fromJson(item)).toList();
 
-    } catch(e, stacktrace) {
+    } catch(e, _) {
         throw Exception('Failed to load forex symbols');
     }
   } else {
