@@ -8,7 +8,7 @@ Welcome to the **Forex Trading App**! This Flutter-based mobile application deli
 - **📈 Trade History Screen**: View detailed past trades for any selected forex symbol, updated dynamically.
 - **🌐 Real-time WebSocket Integration**: Get live data and updates with WebSocket for instant market insights.
 - **📉 Interactive Line Chart**: Visualize price trends over time using the `fl_chart` package.
-- **📜 Trade List**: View historical trades with percentage change indicators to analyze market trends.
+
 
 ## 🖼️ Screens
 ### 1. **Stock Listing Page**
